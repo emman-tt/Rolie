@@ -1,136 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Styled Form</title>
-    <!-- Link to external CSS -->
-    <link rel="stylesheet" href="style.css" />
-  </head>
 
-  <body>
-    <header>Student Registration</header>
-    <section>
-      <fieldset class="personal-info">
-        <section class="personal-info-head">
-          <div>Personal Infomation</div>
-          <div>
-            Please provide your personal details as they appear on official
-            documents
-          </div>
-        </section>
-        <form>
-          <section>
-            <div>First Name</div>
-            <input type="text" />
-          </section>
-          <section>
-            <div>Last Name</div>
-            <input type="text" />
-          </section>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Styled Form</title>
 
-          <section>
-            <div>Date Of Birth</div>
-            <input type="date" />
-          </section>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<header>
+  <h1><i class="fa-solid fa-star-half-stroke"></i>
+    Student Registration
+    <i class="fa-solid fa-star-half-stroke"></i></h1>
+</header>
+<h2>Join our vibrant community! Please fill out all required fields to complete your registration</h2>
 
-          <section>
-            <div>Gender</div>
-            <select id="gender">
-              <option value="male">male</option>
-              <option value="female">female</option>
-            </select>
-          </section>
+<body>
 
-          <section>
-            <div>Nationality</div>
-            <input type="text" />
-          </section>
-        </form>
-      </fieldset>
+
+  <section class="personal-info">
+    <section class="personal-info-head">
+      <div><i id="profile" class="fa-solid fa-user"></i></div>
+      <div>
+        <div>Personal Infomation</div>
+        <div style="font-size: 10pt;">
+          Please provide your personal details as they appear on official
+          documents
+        </div>
+      </div>
     </section>
+    <form class="personal-form">
+      <section style="width: 400px;">
+        <div>First Name</div>
+        <input type="text" />
+      </section>
+      <section style="width: 400px;">
+        <div>Last Name</div>
+        <input type="text" />
+      </section>
+
+      <section>
+        <div>Date Of Birth</div>
+        <input type="date" />
+      </section>
+
+      <section>
+        <div>Gender</div>
+        <select id="gender">
+          <option value="male">male</option>
+          <option value="female">female</option>
+        </select>
+      </section>
+
+      <section>
+        <div>Nationality</div>
+        <input type="text" />
+      </section>
+    </form>
+  </section>
 
 
-    <section>
-      <fieldset class="academic-info">
-        <!-- <legend>Academic Information</legend> -->
-        <section class="academic-info-head">
-          <div>Academic Infomation</div>
-          <div>provide details about your academic enrollment and program</div>
-        </section>
-        <form>
-          Program
 
-          <section>
-            <div>Student ID</div>
-            <input type="text" />
-          </section>
 
-          <section>
-            <div>Program</div>
-            <select id="program">
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="1">3</option>
-              <option value="2">4</option>
-              <option value="2">5</option>
-            </select>
-          </section>
-
-          <section>
-            <div>Year of Study</div>
-            <select id="year">
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="1">3</option>
-              <option value="2">4</option>
-              <option value="2">5</option>
-            </select>
-          </section>
-
-          <section>
-            <div>Major/Field of Study</div>
-            <input type="text" />
-          </section>
-        </form>
-      </fieldset>
+  <section class="academic-info">
+    <section class="academic-info-head">
+      <div><i id="cap" class="fa-solid fa-graduation-cap"></i></div>
+      <div>
+        <div>Academic Infomation</div>
+        <div>provide details about your academic enrollment and program</div>
+      </div>
     </section>
+    <form class="academic-form">
 
 
-    <section>
-      <fieldset class="contact-info">
-        <section class="contact-info-head">
-          <div>Contact Infomation</div>
-          <div>
-            Please provide your current details for communucation purposes
-          </div>
-        </section>
-        <form>
-          <section>
-            <div>Email Address</div>
-            <input type="text" />
-          </section>
-          <section>
-            <div>Phone number</div>
-            <input type="number" />
-          </section>
+      <section>
+        <div>Student ID</div>
+        <input type="text" />
+      </section>
 
-          <section>
-            <div>Date Of Birth</div>
-            <input type="date" />
-          </section>
+      <section>
+        <div>Program</div>
+        <select id="program">
+          <option value="comp">Computer Science</option>
+          <option value="english">English</option>
+          <option value="engineering">engineering</option>
+          <option value="math">mathematics</option>
+          <option value="Politics">Political Science</option>
+        </select>
+      </section>
 
-          <section>
-            <div>Street Address</div>            
-            <input type="text">
-          </section>
+      <section>
+        <div>Year of Study</div>
+        <select id="year">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="1">3</option>
+          <option value="2">4</option>
+          <option value="2">5</option>
+        </select>
+      </section>
 
-       
-        </form>
-      </fieldset>
+      <section>
+        <div>Major/Field of Study</div>
+        <input type="text" />
+      </section>
+    </form>
+  </section>
+
+
+
+
+  <section class="contact-info">
+    <section class="contact-info-head">
+      <div><i id="phone" class="fa-solid fa-phone-volume"></i></div>
+      <div>
+      <div>Contact Infomation</div>
+      <div>
+        Please provide your current details for communucation purposes
+      </div>
+      </div>
     </section>
+    <form class="contact-form">
+      <section>
+        <div>Email Address</div>
+        <input type="text" />
+      </section>
+      <section>
+        <div>Phone number</div>
+        <input type="number" />
+      </section>
+
+      <section>
+        <div>Date Of Birth</div>
+        <input type="date" />
+      </section>
+
+      <section>
+        <div>Street Address</div>
+        <input type="text">
+      </section>
+
+
+    </form>
+  </section>
 
 
 
-  </body>
+
+</body>
+
 </html>
