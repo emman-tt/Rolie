@@ -1,49 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Styled Form</title>
-  <!-- Link to external CSS -->
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <header>Forms Hub</header>
-  <section>
-  <fieldset>
-    <legend>Personal Information</legend>
-    <form>
-      First Name<br>
-      <input type="text" name="firstName"><br>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Styled Form</title>
+    <!-- Link to external CSS -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-      Last Name<br>
-      <input type="text" name="lastName"><br>
-
-      Date Of Birth<br>
-      <input type="date" name="dateOfbirth"><br>
-
-      <label for="gender">Gender</label><br>
-      <select id="gender" name="gender">
-        <option value="male">Male</option>
-        <option value="female">Female</option>
-      </select>
-    </form>
-  </fieldset>
-  </section>
-  <section>
-    <fieldset class="academic-info">
-        <legend>Academic Information</legend>
+  <body>
+    <header>Student Registration</header>
+    <section>
+      <fieldset class="personal-info">
+        <section class="personal-info-head">
+          <div>Personal Infomation</div>
+          <div>
+            Please provide your personal details as they appear on official
+            documents
+          </div>
+        </section>
         <form>
-        Program<br>
-        <input type="text" name="program"><br>
+          <section>
+            <div>First Name</div>
+            <input type="text" />
+          </section>
+          <section>
+            <div>Last Name</div>
+            <input type="text" />
+          </section>
 
-        Year of study<br>
-        <input type="text" name="yearOfStudy"><br>
+          <section>
+            <div>Date Of Birth</div>
+            <input type="date" />
+          </section>
 
-        Major<br>
-        <input type="text" name="major"><br>
+          <section>
+            <div>Gender</div>
+            <select id="gender">
+              <option value="male">male</option>
+              <option value="female">female</option>
+            </select>
+          </section>
+
+          <section>
+            <div>Nationality</div>
+            <input type="text" />
+          </section>
         </form>
-    </fieldset>
+      </fieldset>
     </section>
-</body>
+
+
+    <section>
+      <fieldset class="academic-info">
+        <!-- <legend>Academic Information</legend> -->
+        <section class="academic-info-head">
+          <div>Academic Infomation</div>
+          <div>provide details about your academic enrollment and program</div>
+        </section>
+        <form>
+          Program
+
+          <section>
+            <div>Student ID</div>
+            <input type="text" />
+          </section>
+
+          <section>
+            <div>Program</div>
+            <select id="program">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="1">3</option>
+              <option value="2">4</option>
+              <option value="2">5</option>
+            </select>
+          </section>
+
+          <section>
+            <div>Year of Study</div>
+            <select id="year">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="1">3</option>
+              <option value="2">4</option>
+              <option value="2">5</option>
+            </select>
+          </section>
+
+          <section>
+            <div>Major/Field of Study</div>
+            <input type="text" />
+          </section>
+        </form>
+      </fieldset>
+    </section>
+
+
+    <section>
+      <fieldset class="contact-info">
+        <section class="contact-info-head">
+          <div>Contact Infomation</div>
+          <div>
+            Please provide your current details for communucation purposes
+          </div>
+        </section>
+        <form>
+          <section>
+            <div>Email Address</div>
+            <input type="text" />
+          </section>
+          <section>
+            <div>Phone number</div>
+            <input type="number" />
+          </section>
+
+          <section>
+            <div>Date Of Birth</div>
+            <input type="date" />
+          </section>
+
+          <section>
+            <div>Street Address</div>            
+            <input type="text">
+          </section>
+
+       
+        </form>
+      </fieldset>
+    </section>
+
+
+
+  </body>
 </html>
