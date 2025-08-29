@@ -81,7 +81,7 @@ padding-bottom: 3em;
 }
 
 .personal-form section {
-  min-width: 200px;
+  min-width: 10px;
   display: flex;
 flex-grow: 1;
   /* background-color: rgb(224, 224, 228); */
@@ -172,7 +172,7 @@ padding-top: 5em;
 padding-bottom: 3em;
 }
 .academic-form section{
-      min-width: 400px;
+      min-width: 10px;
   display: flex;
 flex-grow: 1;
   /* background-color: rgb(224, 224, 228); */
@@ -249,7 +249,7 @@ padding-bottom: 3em;
 }
 
 .contact-form section{
-          min-width: 400px;
+          min-width: 10px;
   display: flex;
 flex-grow: 1;
   /* background-color: rgb(224, 224, 228); */
@@ -303,4 +303,53 @@ flex-grow: 1;
     border-radius: 10px;
     color: white;
  
+}
+
+#special{
+    width: 400px;
+}
+
+@media(max-width:500px){
+.personal-form {
+   padding-left: 1em;
+   padding-right: 1em;
+}
+
+#special{
+    width: 100px;
+}
+
+.academic-form{
+     padding-left: 1em;
+   padding-right: 1em;
+}
+.contact-form{
+     padding-left: 1em;
+   padding-right: 1em;
+}
+
+.academic-info-head{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.contact-info-head{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.personal-info-head{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header{
+    font-size: 12px;
+}
+
+h2{
+    font-size: small;
+   padding-left: 1em;
+}
 }
