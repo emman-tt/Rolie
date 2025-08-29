@@ -172,7 +172,7 @@ padding-top: 5em;
 padding-bottom: 3em;
 }
 .academic-form section{
-      min-width: 10px;
+      min-width: 400px;
   display: flex;
 flex-grow: 1;
   /* background-color: rgb(224, 224, 228); */
@@ -249,7 +249,7 @@ padding-bottom: 3em;
 }
 
 .contact-form section{
-          min-width: 10px;
+          min-width: 400px;
   display: flex;
 flex-grow: 1;
   /* background-color: rgb(224, 224, 228); */
@@ -309,7 +309,7 @@ flex-grow: 1;
     width: 400px;
 }
 
-@media(max-width:500px){
+@media(max-width:700px){
 .personal-form {
    padding-left: 1em;
    padding-right: 1em;
@@ -342,6 +342,10 @@ flex-grow: 1;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.academic-form section,.contact-form section,.personal-form section{
+  min-width: 10px;
 }
 
 header{
