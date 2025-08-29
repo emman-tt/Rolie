@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Styled Form</title>
+  <!-- Link to external CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>Forms Hub</header>
+  <section>
+  <fieldset>
+    <legend>Personal Information</legend>
+    <form>
+      First Name<br>
+      <input type="text" name="firstName"><br>
+
+      Last Name<br>
+      <input type="text" name="lastName"><br>
+
+      Date Of Birth<br>
+      <input type="date" name="dateOfbirth"><br>
+
+      <label for="gender">Gender</label><br>
+      <select id="gender" name="gender">
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+      </select>
+    </form>
+  </fieldset>
+  </section>
+  <section>
+    <fieldset class="academic-info">
+        <legend>Academic Information</legend>
+        <form>
+        Program<br>
+        <input type="text" name="program"><br>
+
+        Year of study<br>
+        <input type="text" name="yearOfStudy"><br>
+
+        Major<br>
+        <input type="text" name="major"><br>
+        </form>
+    </fieldset>
+    </section>
+</body>
+</html>
