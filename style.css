@@ -1,4 +1,4 @@
-html {
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -24,11 +24,10 @@ header h1 {
 
 h2 {
   font-size: 10pt;
-font-weight: 400;
+  font-weight: 400;
   margin-top: 0;
   justify-content: center;
   display: flex;
-  
 }
 
 .personal-info {
@@ -40,8 +39,7 @@ font-weight: 400;
   border-radius: 20px;
   height: 100%;
   margin-top: 4em;
- padding-bottom: 3em;
- 
+  padding-bottom: 3em;
 }
 
 .personal-info-head {
@@ -64,33 +62,29 @@ font-weight: 400;
 
 .personal-form {
   display: flex;
-
   flex-wrap: wrap;
   background-color: rgb(255, 255, 255);
   height: auto;
-  padding-top:10px;
+  padding-top: 10px;
   column-gap: 1em;
- 
+
   padding-left: 5em;
   padding-right: 5em;
   row-gap: 2em;
   background-color: rgb(255, 255, 255);
-flex-grow: 1;
-padding-top: 5em;
-padding-bottom: 3em;
+  flex-grow: 1;
+  padding-top: 5em;
+  padding-bottom: 3em;
 }
 
 .personal-form section {
   min-width: 10px;
   display: flex;
-flex-grow: 1;
+  flex-grow: 1;
   /* background-color: rgb(224, 224, 228); */
   flex-direction: column;
   flex-shrink: 0;
-
 }
-
-
 
 .personal-form input {
   background-color: hsla(0, 1%, 42%, 0.079);
@@ -110,23 +104,19 @@ flex-grow: 1;
   border-radius: 5px;
   border: 0px;
   padding-left: 20px;
-  
-  
 }
 
-#gender option  {
-  
-      border-radius: 100px;
+#gender option {
+  border-radius: 100px;
 
   width: auto;
   font-size: 15px;
-display: flex;
+  display: flex;
   justify-content: center;
-
 }
 
-.academic-info{
-      display: flex;
+.academic-info {
+  display: flex;
   flex-direction: column;
   border: 1px solid black;
   width: 70%;
@@ -134,10 +124,10 @@ display: flex;
   border-radius: 10px;
   height: 100%;
   margin-top: 4em;
- padding-bottom: 3em;
+  padding-bottom: 3em;
 }
-.academic-info-head{
-    background-color: rgb(39, 150, 39);
+.academic-info-head {
+  background-color: rgb(39, 150, 39);
   color: white;
   margin-left: 0;
 
@@ -154,33 +144,33 @@ display: flex;
   gap: 1em;
 }
 
-.academic-form{
-     display: flex;
+.academic-form {
+  display: flex;
 
   flex-wrap: wrap;
   background-color: rgb(255, 255, 255);
   height: auto;
-  padding-top:10px;
+  padding-top: 10px;
   column-gap: 1em;
- 
+
   padding-left: 5em;
   padding-right: 5em;
   row-gap: 2em;
   background-color: rgb(255, 255, 255);
-flex-grow: 1;
-padding-top: 5em;
-padding-bottom: 3em;
+  flex-grow: 1;
+  padding-top: 5em;
+  padding-bottom: 3em;
 }
-.academic-form section{
-      min-width: 400px;
+.academic-form section {
+  min-width: 400px;
   display: flex;
-flex-grow: 1;
+  flex-grow: 1;
   /* background-color: rgb(224, 224, 228); */
   flex-direction: column;
   flex-shrink: 0;
 }
-.academic-form input{
-     background-color: hsla(0, 1%, 42%, 0.079);
+.academic-form input {
+  background-color: hsla(0, 1%, 42%, 0.079);
   height: 30px;
   padding-top: 5px;
   padding-bottom: 5px;
@@ -188,19 +178,18 @@ flex-grow: 1;
   border: 0px;
   padding-left: 20px;
 }
-.academic-form select{
-      background-color: hsla(0, 1%, 42%, 0.079);
+.academic-form select {
+  background-color: hsla(0, 1%, 42%, 0.079);
   height: 40px;
   padding-top: 5px;
   padding-bottom: 5px;
   border-radius: 5px;
   border: 0px;
   padding-left: 20px;
-  
 }
 
-.contact-info{
-   display: flex;
+.contact-info {
+  display: flex;
   flex-direction: column;
   border: 1px solid black;
   width: 70%;
@@ -208,12 +197,12 @@ flex-grow: 1;
   border-radius: 10px;
   height: 100%;
   margin-top: 4em;
- padding-bottom: 3em;
- margin-bottom: 5em;
+  padding-bottom: 3em;
+  margin-bottom: 5em;
 }
 
-.contact-info-head{
-       background-color: rgb(64, 44, 239);
+.contact-info-head {
+  background-color: rgb(64, 44, 239);
   color: white;
   margin-left: 0;
 
@@ -230,35 +219,35 @@ flex-grow: 1;
   gap: 1em;
 }
 
-.contact-form{
-     display: flex;
+.contact-form {
+  display: flex;
 
   flex-wrap: wrap;
   background-color: rgb(255, 255, 255);
   height: auto;
-  padding-top:10px;
+  padding-top: 10px;
   column-gap: 1em;
- 
+
   padding-left: 5em;
   padding-right: 5em;
   row-gap: 2em;
   background-color: rgb(255, 255, 255);
-flex-grow: 1;
-padding-top: 5em;
-padding-bottom: 3em;
+  flex-grow: 1;
+  padding-top: 5em;
+  padding-bottom: 3em;
 }
 
-.contact-form section{
-          min-width: 400px;
+.contact-form section {
+  min-width: 400px;
   display: flex;
-flex-grow: 1;
+  flex-grow: 1;
   /* background-color: rgb(224, 224, 228); */
   flex-direction: column;
   flex-shrink: 0;
 }
 
-.contact-form input{
-         background-color: hsla(0, 1%, 42%, 0.079);
+.contact-form input {
+  background-color: hsla(0, 1%, 42%, 0.079);
   height: 30px;
   padding-top: 5px;
   padding-bottom: 5px;
@@ -267,8 +256,10 @@ flex-grow: 1;
   padding-left: 20px;
 }
 
-.contact-form select{
-         background-color: hsla(0, 1%, 42%, 0.079);
+
+
+.contact-form select {
+  background-color: hsla(0, 1%, 42%, 0.079);
   height: 40px;
   padding-top: 5px;
   padding-bottom: 5px;
@@ -278,82 +269,205 @@ flex-grow: 1;
 }
 
 #profile {
-   
-    font-size: 40px;
-    padding: 10px;
-    background-color: rgba(177, 176, 176, 0.232);
-    border-radius: 10px;
-    color: white;
- 
+  font-size: 40px;
+  padding: 10px;
+  background-color: rgba(177, 176, 176, 0.232);
+  border-radius: 10px;
+  color: white;
 }
 #cap {
-   
-    font-size: 40px;
-    padding: 10px;
-    background-color: rgba(177, 176, 176, 0.232);
-    border-radius: 10px;
-    color: white;
- 
+  font-size: 40px;
+  padding: 10px;
+  background-color: rgba(177, 176, 176, 0.232);
+  border-radius: 10px;
+  color: white;
 }
 #phone {
-   
-    font-size: 40px;
-    padding: 10px;
-    background-color: rgba(177, 176, 176, 0.232);
-    border-radius: 10px;
-    color: white;
- 
+  font-size: 40px;
+  padding: 10px;
+  background-color: rgba(177, 176, 176, 0.232);
+  border-radius: 10px;
+  color: white;
 }
 
-#special{
-    width: 400px;
+#special {
+  width: 400px;
 }
 
-@media(max-width:700px){
-.personal-form {
-   padding-left: 1em;
-   padding-right: 1em;
-}
+@media (max-width: 700px) {
+  .personal-form {
+    padding-left: 1em;
+    padding-right: 1em;
+  }
 
-#special{
+  #special {
     width: 100px;
-}
+  }
 
-.academic-form{
-     padding-left: 1em;
-   padding-right: 1em;
-}
-.contact-form{
-     padding-left: 1em;
-   padding-right: 1em;
-}
+  .academic-form {
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+  .contact-form {
+    padding-left: 1em;
+    padding-right: 1em;
+  }
 
-.academic-info-head{
+  .academic-info-head {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-.contact-info-head{
+  }
+  .contact-info-head {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-.personal-info-head{
+  }
+  .personal-info-head {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
+  }
 
-.academic-form section,.contact-form section,.personal-form section{
-  min-width: 10px;
-}
+  .academic-form section,
+  .contact-form section,
+  .personal-form section {
+    min-width: 10px;
+  }
 
-header{
+  header {
     font-size: 12px;
+  }
+
+  h2 {
+    font-size: small;
+    padding-left: 1em;
+  }
 }
 
-h2{
-    font-size: small;
-   padding-left: 1em;
+/* Interactive + Animation styles */
+.fade-in {
+  animation: fadeInUp 700ms ease both;
 }
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.input-focus {
+  outline: none;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
+  transition: box-shadow 0.18s ease, transform 0.12s ease;
+}
+
+.submit-section {
+  width: 70%;
+  margin: 2em auto 5em;
+  display: flex;
+  gap: 1em;
+  align-items: center;
+}
+
+.submit-btn {
+  background: linear-gradient(90deg, #4b6cb7, #182848);
+  color: white;
+  padding: 0.6em 1.2em;
+  border-radius: 8px;
+  border: 0;
+  cursor: pointer;
+  font-weight: 600;
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+.submit-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(24, 40, 72, 0.12);
+}
+
+.form-message {
+  font-weight: 600;
+}
+.form-message.error {
+  color: #b00020;
+}
+.form-message.success {
+  color: #0b7a24;
+}
+
+#phone{
+  font-size:14px;
+  color:#333333;
+}
+#phone::placeholder{ color: #888888; opacity: 1; }
+
+/* National info styles */
+.national-info{
+  display:flex;
+  flex-direction:column;
+  border:1px solid black;
+  width:70%;
+  border-radius:10px;
+  margin:4em auto 3em;
+  padding-bottom:3em;
+}
+.national-info-head{
+  background-color: rgb(255, 118, 117);
+  color:white;
+  border-top-left-radius:10px;
+  border-top-right-radius:10px;
+  padding-left:4%;
+  padding-block:30px;
+  display:flex;
+  flex-direction:row;
+  gap:1em;
+}
+.national-form{
+  display:flex;
+  flex-wrap:wrap;
+  padding-left:5em;
+  padding-right:5em;
+  row-gap:2em;
+  column-gap:1em;
+  padding-top:2em;
+  padding-bottom:2em;
+}
+.national-form section{ min-width: 300px; display:flex; flex-direction:column; }
+.card-preview{ width:140px; height:90px; object-fit:cover; border-radius:6px; margin-top:6px; display:block; }
+
+.error {
+  color: #b00020;
+  font-size: 11px;
+  margin-top: 6px;
+}
+
+header i.pulse,
+.pulse {
+  animation: pulse 800ms ease-in-out 2;
+}
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.18);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Small responsive tweak for submit-section */
+@media (max-width: 700px) {
+  .submit-section {
+    width: 90%;
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }

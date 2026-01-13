@@ -12,7 +12,8 @@
 <header>
   <h1><i class="fa-solid fa-star-half-stroke"></i>
     Student Registration
-    <i class="fa-solid fa-star-half-stroke"></i></h1>
+    <i class="fa-solid fa-star-half-stroke"></i>
+  </h1>
 </header>
 <h2>Join our vibrant community! Please fill out all required fields to complete your registration</h2>
 
@@ -31,18 +32,18 @@
       </div>
     </section>
     <form class="personal-form">
-      <section id="special" >
+      <section id="special">
         <div>First Name</div>
-        <input type="text" />
+        <input id="firstName" type="text" placeholder="Enter first name" />
       </section>
-      <section id="special" >
+      <section id="special">
         <div>Last Name</div>
-        <input type="text" />
+        <input id="lastName" type="text" placeholder="Enter last name" />
       </section>
 
       <section>
         <div>Date Of Birth</div>
-        <input type="date" />
+        <input id="dob" type="date" />
       </section>
 
       <section>
@@ -54,8 +55,38 @@
       </section>
 
       <section>
-        <div>Nationality</div>
-        <input type="text" />
+        <div>National ID</div>
+        <input id="nationalId" type="text" placeholder="e.g. 12345678" />
+        <div class="error" id="nationalIdError" aria-live="polite"></div>
+      </section>
+    </form>
+  </section>
+
+
+  <section class="national-info">
+    <section class="national-info-head">
+      <div><i class="fa-solid fa-id-card"></i></div>
+      <div>
+        <div>National Details</div>
+        <div style="font-size: 10pt;">Provide registered names, official ID and upload a photo of your national card
+        </div>
+      </div>
+    </section>
+    <form class="national-form">
+      <section>
+        <div>Registered Names</div>
+        <input id="registeredNames" type="text" placeholder="As registered on national records" />
+      </section>
+      <section>
+        <div>Registered ID</div>
+        <input id="registeredId" type="text" placeholder="e.g. 12345678" />
+        <div class="error" id="registeredIdError" aria-live="polite"></div>
+      </section>
+      <section>
+        <div>Card Photo</div>
+        <input id="cardPhoto" type="file" accept="image/*" />
+        <div class="error" id="cardPhotoError" aria-live="polite"></div>
+        <img id="cardPreview" class="card-preview" src="" alt="Card preview" style="display:none;" />
       </section>
     </form>
   </section>
@@ -76,7 +107,7 @@
 
       <section>
         <div>Student ID</div>
-        <input type="text" />
+        <input id="studentId" type="text" placeholder="Student identification" />
       </section>
 
       <section>
@@ -95,15 +126,21 @@
         <select id="year">
           <option value="1">1</option>
           <option value="2">2</option>
-          <option value="1">3</option>
-          <option value="2">4</option>
-          <option value="2">5</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
         </select>
       </section>
 
       <section>
         <div>Major/Field of Study</div>
-        <input type="text" />
+        <input id="major" type="text" />
+      </section>
+
+      <section>
+        <div>Enrollment Year</div>
+        <input id="enrollmentYear" type="number" min="1950" max="2100" placeholder="e.g. 2024" />
       </section>
     </form>
   </section>
@@ -115,39 +152,152 @@
     <section class="contact-info-head">
       <div><i id="phone" class="fa-solid fa-phone-volume"></i></div>
       <div>
-      <div>Contact Infomation</div>
-      <div>
-        Please provide your current details for communucation purposes
-      </div>
+        <div>Contact Infomation</div>
+        <div>
+          Please provide your current details for communucation purposes
+        </div>
       </div>
     </section>
     <form class="contact-form">
       <section>
         <div>Email Address</div>
-        <input type="text" />
+        <input id="email" type="email" placeholder="you@example.com" />
       </section>
       <section>
         <div>Phone number</div>
-        <input type="number" />
+        <input id="phone" type="tel" placeholder=" +1234567890" />
       </section>
 
       <section>
-        <div>Date Of Birth</div>
-        <input type="date" />
+        <div>Alternate Phone</div>
+        <input id="altPhone" type="tel" placeholder="optional" />
       </section>
 
       <section>
         <div>Street Address</div>
-        <input type="text">
+        <input id="street" type="text">
+      </section>
+
+      <section>
+        <div>City</div>
+        <input id="city" type="text" placeholder="City" />
       </section>
 
 
     </form>
   </section>
 
-
+  <section class="submit-section">
+    <button id="submitBtn" class="submit-btn">Submit Registration</button>
+    <div id="formMessage" aria-live="polite" class="form-message"></div>
+  </section>
 
 
 </body>
+
+<script>
+  // Animations: fade-in sections on DOM ready
+  document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('.personal-info, .national-info, .academic-info, .contact-info').forEach((el) => {
+      el.classList.add('fade-in');
+    });
+
+    // Input focus highlight
+    document.querySelectorAll('input, select').forEach((el) => {
+      el.addEventListener('focus', () => el.classList.add('input-focus'));
+      el.addEventListener('blur', () => el.classList.remove('input-focus'));
+    });
+
+    // Basic validation on submit
+    const submitBtn = document.getElementById('submitBtn');
+    const formMessage = document.getElementById('formMessage');
+
+    submitBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      formMessage.textContent = '';
+      let errors = [];
+
+      const firstName = document.getElementById('firstName').value.trim();
+      const lastName = document.getElementById('lastName').value.trim();
+      const nationalId = document.getElementById('nationalId').value.trim();
+      const registeredNames = document.getElementById('registeredNames').value.trim();
+      const registeredId = document.getElementById('registeredId').value.trim();
+      const cardFile = document.getElementById('cardPhoto').files[0];
+      const email = document.getElementById('email').value.trim();
+      const studentId = document.getElementById('studentId').value.trim();
+
+      if (!firstName) errors.push('First name required');
+      if (!lastName) errors.push('Last name required');
+      if (!/^[0-9]{6,12}$/.test(nationalId)) {
+        errors.push('National ID must be 6–12 digits');
+        document.getElementById('nationalIdError').textContent = 'National ID must be 6–12 digits';
+      } else {
+        document.getElementById('nationalIdError').textContent = '';
+      }
+      if (!registeredNames) {
+        errors.push('Registered names required');
+      }
+      if (!/^[0-9]{6,12}$/.test(registeredId)) {
+        errors.push('Registered ID must be 6–12 digits');
+        document.getElementById('registeredIdError').textContent = 'Registered ID must be 6–12 digits';
+      } else {
+        document.getElementById('registeredIdError').textContent = '';
+      }
+      if (!cardFile) {
+        errors.push('Card photo required');
+        document.getElementById('cardPhotoError').textContent = 'Please upload an image of your card';
+      } else if (!cardFile.type.startsWith('image/')) {
+        errors.push('Card photo must be an image');
+        document.getElementById('cardPhotoError').textContent = 'Card photo must be an image (jpg/png)';
+      } else if (cardFile.size > 2 * 1024 * 1024) {
+        errors.push('Card photo must be smaller than 2MB');
+        document.getElementById('cardPhotoError').textContent = 'File too large (max 2MB)';
+      } else {
+        document.getElementById('cardPhotoError').textContent = '';
+      }
+      if (email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) errors.push('Invalid email');
+      if (!studentId) errors.push('Student ID required');
+
+      if (errors.length) {
+        formMessage.textContent = 'Please fix: ' + errors.join(', ');
+        formMessage.classList.add('error');
+        formMessage.classList.remove('success');
+        formMessage.scrollIntoView({ behavior: 'smooth' });
+        return;
+      }
+
+      // Simulate successful submission
+      formMessage.textContent = 'Registration submitted successfully!';
+      formMessage.classList.remove('error');
+      formMessage.classList.add('success');
+
+      // Simple animation: pulse the header icons
+      document.querySelectorAll('header i').forEach(i => i.classList.add('pulse'));
+
+      // Reset form after short delay
+      setTimeout(() => {
+        document.querySelectorAll('form').forEach(f => f.reset());
+        document.querySelectorAll('header i').forEach(i => i.classList.remove('pulse'));
+        document.getElementById('cardPreview').style.display = 'none';
+      }, 1200);
+    });
+
+    // Card photo preview
+    const cardInput = document.getElementById('cardPhoto');
+    const preview = document.getElementById('cardPreview');
+    if (cardInput) {
+      cardInput.addEventListener('change', (e) => {
+        const file = e.target.files[0];
+        if (!file) { preview.style.display = 'none'; return; }
+        if (!file.type.startsWith('image/')) { preview.style.display = 'none'; return; }
+        const url = URL.createObjectURL(file);
+        preview.src = url;
+        preview.style.display = 'block';
+      });
+    }
+  });
+</script>
+
+</html>
 
 </html>
